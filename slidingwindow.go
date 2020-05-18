@@ -19,10 +19,10 @@ type SlidingWindow struct {
 
 // New returns an empty sliding window.
 func New(size int) (*SlidingWindow, error) {
-	mw := SlidingWindow{}
 	if size <= 0 {
-		return &mw, errors.New("Size must be > 0")
+		return nil, errors.New("Size must be > 0")
 	}
+	mw := SlidingWindow{}
 	mw.size = size
 	mw.queue = make([]Element, mw.size)
 	mw.index = 0
