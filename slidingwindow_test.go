@@ -3,7 +3,7 @@ package slidingwindow
 import "testing"
 
 // Invalid size test
-func TestNegativeSise(t *testing.T) {
+func TestNegativeSize(t *testing.T) {
 	_, err := New(-1)
 	if err == nil {
 		t.Error("New(-1) succeeded")
